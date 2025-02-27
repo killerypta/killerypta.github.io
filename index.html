@@ -14,8 +14,8 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="#">Пользователям(разработка)</a></li>
-                    <li><a href="#">Администрации(разработка)</a></li>
+                    <li><a href="pages/users.html">Пользователям (разработка)</a></li>
+                    <li><a href="#">Администрации (разработка)</a></li>
                 </ul>
             </nav>
         </header>
@@ -24,34 +24,52 @@
         </div>
     </div>
     <div class="collapsible-container">
-        <div class="collapsible-header">👤 Администрация чата</div>
+        <div class="collapsible-header tile-header">👤 Администрация чата</div>
         <div class="collapsible-content">
             <ul style="list-style-type: none; padding: 0;">
-                <li class="rank-header">⭐️⭐️⭐️⭐️⭐️ Владельцы</li>
+                <li class="tile-inner-header">⭐️⭐️⭐️⭐️⭐️ Владельцы</li>
                 <li><a href="https://t.me/Leraevol" target="_blank" data-tooltip="Валерия">@Leraevol</a></li>
                 <li><a href="https://t.me/pehenyshkacookie" target="_blank" data-tooltip="Александр">@pehenyshkacookie</a></li>
-                <li class="rank-header">⭐️⭐️⭐️⭐️ Старшие администраторы</li>
+                <li class="tile-inner-header">⭐️⭐️⭐️⭐️ Старшие администраторы</li>
                 <li><a href="https://t.me/killerypta" target="_blank" data-tooltip="Юрий">@killerypta</a></li>
                 <li><a href="https://t.me/Bestia_besti" target="_blank" data-tooltip="Виолетта">@Bestia_besti</a></li>
-                <li class="rank-header">⭐️⭐️⭐️ Младшие администраторы</li>
+                <li class="tile-inner-header">⭐️⭐️⭐️ Младшие администраторы</li>
                 <li><a href="https://t.me/Aliavl_01" target="_blank" data-tooltip="Аля">@Aliavl_01</a></li>
-                <li class="rank-header">⭐️⭐️ Старшие модераторы</li>
+                <li class="tile-inner-header">⭐️⭐️ Старшие модераторы</li>
                 <li><a href="https://t.me/Nnnnn8240" target="_blank" data-tooltip="Наталья">@Nnnnn8240</a></li>
-                <li class="rank-header">⭐️ Младшие администраторы</li>
-                <li><a href="https://t.me/TBOI_MOMI" target="_blank" data-tooltip="Неизвестно">@TBOI_MOMI</a></li>
+                <li class="tile-inner-header">⭐️ Младшие администраторы</li>
+                <li><a href="https://t.me/TBOI_MOMI" target="_blank" data-tooltip="Арина">@TBOI_MOMI</a></li>
             </ul>
         </div>
     </div>
+    <div class="collapsible-container">
+        <div class="collapsible-header tile-header">✔️ Полезная информация</div>
+        <div class="collapsible-content">
+            <p class="tile-inner-header">Чистка (ежемесячно)</p>
+            <p class="tile-content">Пользователи которые неактивны более 4 дней или имеющее менее 800 сообщений в месяц, будут исключены за неактивность. Если есть причина для временного отсутствия, пожалуйста сообщите об этом владельцам чата.</p>
+            <p class="tile-inner-header">Как стать администратором?</p>
+            <p class="tile-content">Требования:</p>
+            <ul class="tile-content">
+                <li>• требование</li>
+                <li>• требование</li>
+                <li>• требование</li>
+            </ul>
+            <p class="tile-content">Чтобы стать администратором, следите за новыми объявлениями о наборе на должность.</p>
+        </div>
+    </div>
     <script>
-        document.querySelector('.collapsible-header').addEventListener('click', function() {
-            const content = document.querySelector('.collapsible-content');
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-                this.classList.remove('active');
-            } else {
-                content.style.display = 'block';
-                this.classList.add('active');
-            }
+        // Добавление функционала для сворачивания и разворачивания плиток
+        document.querySelectorAll('.collapsible-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                    this.classList.remove('active');
+                } else {
+                    content.style.display = 'block';
+                    this.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
