@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: "EB Garamond", serif;
+    font-size: 15px;
+    color: #000;
+    line-height: 1.5;
+    background: #000; /* Set the background color to black */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.header-container {
+    background-image: url('../images/head-background.png'); /* Add background image to cover both header and container */
+    background-size: cover;
+    background-position: center top; /* Ensure the background image covers both the container and the header */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100vh; /* Ensure the background image covers the full height of the viewport */
+    position: relative;
+}
+
+.header-container::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Extend the gradient to cover the rest of the viewport */
+    background: linear-gradient(to bottom, #050417, #000); /* Smooth transition from #050417 to black */
+    z-index: -1; /* Place the gradient behind the content */
+}
+
+header {
+    background-color: rgba(128, 128, 128, 0.2); /* Change the header background color to grey with 20% transparency */
+    padding: 10px 0;
+    color: white; /* Change the text color to white */
+    /* Remove the border-bottom to hide the white line */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white; /* Измените цвет текста, если необходимо */
+    text-align: center; /* Выровнять текст по центру */
+}
+
+.container h1 {
+    font-size: 2em; /* Reduce the font size */
+    margin: 0; /* Убрать отступы */
+    padding: 20px 0; /* Добавить отступы сверху и снизу */
+    display: inline-block; /* Сделать элемент блочным */
+    text-align: center; /* Center the text */
+    line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+.group-name {
+    display: block; /* Make the group name a block element to move it to a new line */
+    margin-top: 10px; /* Add some space above the group name */
+    font-size: 1.2em; /* Reduce the font size of the group name */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Change the text color to white */
+    font-weight: bold;
+    font-size: 15px; /* Увеличить размер вкладок до 15px */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.2); /* Change the footer background color to #333 with 20% transparency */
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: white; /* Change the text color to white */
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: white; /* Change the text color to white */
+    font-weight: bold;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.collapsible-container {
+    background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent grey background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    margin: 0 auto; /* Move the tile closer to the greeting */
+    max-width: 600px; /* Make the tile narrower */
+    color: white; /* Change the text color to white */
+    text-align: center; /* Center the text */
+    position: relative;
+    top: -160px; /* Adjust the position to move it slightly lower */
+    font-size: 16px; /* Slightly decrease text size */
+}
+
+.collapsible-header {
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collapsible-header::after {
+    content: '▼'; /* Add arrow */
+    margin-left: 10px;
+    transition: transform 0.3s ease; /* Add transition for rotation */
+}
+
+.collapsible-header.active::after {
+    transform: rotate(180deg); /* Rotate arrow when active */
+}
+
+.collapsible-content {
+    display: none;
+    padding-top: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.collapsible-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.collapsible-content li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Add some space between list items */
+}
+
+.collapsible-content li:first-child {
+    font-size: 18px; /* Increase font size for rank headers */
+    font-weight: bold; /* Make rank headers bold */
+    margin-top: 20px; /* Add space above rank headers */
+}
+
+.rank-header {
+    font-size: 18px; /* Font size for rank headers */
+    font-weight: bold; /* Make rank headers bold */
+    margin-top: 20px; /* Add space above rank headers */
+}
+
+.collapsible-content .rank {
+    font-size: 18px; /* Font size for ranks */
+    text-align: left; /* Align ranks to the left */
+    flex: 1; /* Make ranks a separate column */
+    margin-left: 10px; /* Shift ranks slightly to the right */
+}
+
+.collapsible-content .nickname {
+    font-size: 18px; /* Font size for nicknames */
+    text-align: left; /* Align nicknames to the left */
+    flex: 2; /* Make nicknames a separate column */
+    font-weight: bold; /* Make nicknames bold */
+}
+
+.collapsible-content a {
+    color: #84b3f1; /* Change hyperlink color to #84b3f1 */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size for nicknames */
+    font-weight: bold; /* Make nicknames bold */
+    position: relative;
+}
+
+.collapsible-content a:hover::after {
+    content: attr(data-tooltip); /* Use the data-tooltip attribute for the tooltip content */
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+    font-size: 12px;
+    margin-bottom: 5px;
+}

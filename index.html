@@ -1,1 +1,58 @@
-Hello World
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800&display=swap" rel="stylesheet">
+    <title>Sapphire Palace website</title>
+</head>
+<body>
+    <div class="header-container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#">Пользователям(разработка)</a></li>
+                    <li><a href="#">Администрации(разработка)</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <h1>Приветствуем вас на сайте группы <span class="group-name">💎Sapphire Palace💎</span></h1>
+        </div>
+    </div>
+    <div class="collapsible-container">
+        <div class="collapsible-header">👤 Администрация чата</div>
+        <div class="collapsible-content">
+            <ul style="list-style-type: none; padding: 0;">
+                <li class="rank-header">⭐️⭐️⭐️⭐️⭐️ Владельцы</li>
+                <li><a href="https://t.me/Leraevol" target="_blank" data-tooltip="Валерия">@Leraevol</a></li>
+                <li><a href="https://t.me/pehenyshkacookie" target="_blank" data-tooltip="Александр">@pehenyshkacookie</a></li>
+                <li class="rank-header">⭐️⭐️⭐️⭐️ Старшие администраторы</li>
+                <li><a href="https://t.me/killerypta" target="_blank" data-tooltip="Юрий">@killerypta</a></li>
+                <li><a href="https://t.me/Bestia_besti" target="_blank" data-tooltip="Виолетта">@Bestia_besti</a></li>
+                <li class="rank-header">⭐️⭐️⭐️ Младшие администраторы</li>
+                <li><a href="https://t.me/Aliavl_01" target="_blank" data-tooltip="Аля">@Aliavl_01</a></li>
+                <li class="rank-header">⭐️⭐️ Старшие модераторы</li>
+                <li><a href="https://t.me/Nnnnn8240" target="_blank" data-tooltip="Наталья">@Nnnnn8240</a></li>
+                <li class="rank-header">⭐️ Младшие администраторы</li>
+                <li><a href="https://t.me/TBOI_MOMI" target="_blank" data-tooltip="Неизвестно">@TBOI_MOMI</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.querySelector('.collapsible-header').addEventListener('click', function() {
+            const content = document.querySelector('.collapsible-content');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                this.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                this.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
