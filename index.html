@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="header-container">
+        <!-- Шапка сайта -->
         <header>
             <nav>
                 <ul>
@@ -19,10 +20,12 @@
                 </ul>
             </nav>
         </header>
+        <!-- Основной контейнер с приветствием -->
         <div class="container">
             <h1>Приветствуем вас на сайте группы <span class="group-name">💎Sapphire Palace💎</span></h1>
         </div>
     </div>
+    <!-- Плитка с информацией об администрации чата -->
     <div class="collapsible-container">
         <div class="collapsible-header tile-header">👤 Администрация чата</div>
         <div class="collapsible-content">
@@ -42,21 +45,35 @@
             </ul>
         </div>
     </div>
+    <!-- Плитка с полезной информацией -->
     <div class="collapsible-container">
         <div class="collapsible-header tile-header">✔️ Полезная информация</div>
         <div class="collapsible-content">
             <p class="tile-inner-header">Чистка (ежемесячно)</p>
             <p class="tile-content">Пользователи которые неактивны более 4 дней или имеющее менее 800 сообщений в месяц, будут исключены за неактивность. Если есть причина для временного отсутствия, пожалуйста сообщите об этом владельцам чата.</p>
             <p class="tile-inner-header">Как стать администратором?</p>
-            <p class="tile-content">Требования:</p>
-            <ul class="tile-content">
-                <li>• требование</li>
-                <li>• требование</li>
-                <li>• требование</li>
-            </ul>
-            <p class="tile-content">Чтобы стать администратором, следите за новыми объявлениями о наборе на должность.</p>
+            <p class="tile-content-bold">Требования:</p>
+            <p class="tile-content">• Активность в группе</p>
+            <p class="tile-content">• Знание правил</p>
+            <p class="tile-content">• Хорошее поведение (отсутствие нарушений)</p>
+            <p class="tile-content">• Нахождение в группе не менее 2 недель</p>
+            <p class="tile-content-italic">Чтобы стать администратором, следите за новыми объявлениями о наборе на должность.</p>
         </div>
     </div>
+    <!-- Плитка с новостями -->
+    <div class="collapsible-container">
+        <div class="collapsible-header tile-header">📰 Новости!</div>
+        <div class="collapsible-content">
+            <p class="tile-content">На данный момент нет актуальных новостей!</p>
+            <p class="tile-content">Архив новостей🗄️ (разработка)</p>
+        </div>
+    </div>
+    <!-- Контактная информация -->
+    <footer>
+        <div class="contact-info" style="text-align: center; font-size: 1.2em;">
+            <p>Email: <a href="mailto:intellectual.canidae.nxwz+s.p.web@mask.me?subject=s.p. website support" style="text-decoration: none; color: #84b3f1;">contact-mail</a> | Telegram: <a href="https://t.me/killerypta" target="_blank" style="text-decoration: none; color: #84b3f1;">@killerypta</a></p>
+        </div>
+    </footer>
     <script>
         // Добавление функционала для сворачивания и разворачивания плиток
         document.querySelectorAll('.collapsible-header').forEach(header => {

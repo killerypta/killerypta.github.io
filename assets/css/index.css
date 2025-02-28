@@ -50,7 +50,7 @@ header {
 }
 
 .container h1 {
-    font-size: 2em; /* Уменьшить размер шрифта */
+    font-size: 2.5rem; /* Увеличить размер шрифта */
     margin: 0; /* Убрать отступы */
     padding: 20px 0; /* Добавить отступы сверху и снизу */
     display: inline-block; /* Сделать элемент блочным */
@@ -81,7 +81,8 @@ nav ul li a {
     text-decoration: none;
     color: white; /* Изменить цвет текста на белый */
     font-weight: bold;
-    font-size: 15px; /* Увеличить размер вкладок до 15px */
+    font-size: 18px; /* Увеличить размер вкладок до 18px */
+    opacity: 1; /* Сделать вкладки прозрачными на 90% */
 }
 
 nav ul li a:hover {
@@ -92,10 +93,24 @@ footer {
     background-color: rgba(51, 51, 51, 0.2); /* Изменить цвет фона подвала на #333 с 20% прозрачностью */
     padding: 10px 0;
     border-top: 1px solid #ddd;
-    position: fixed;
     width: 100%;
-    bottom: 0;
     color: white; /* Изменить цвет текста на белый */
+    position: relative;
+    bottom: 0;
+}
+
+footer .contact-info {
+    text-align: center;
+    font-size: 18px; /* Увеличить размер шрифта */
+}
+
+footer .contact-info a {
+    color: #84b3f1; /* Изменить цвет гиперссылок, чтобы соответствовать никнеймам */
+    text-decoration: none; /* Убрать подчеркивание */
+}
+
+footer .contact-info a:hover {
+    text-decoration: underline; /* Добавить подчеркивание при наведении */
 }
 
 footer nav ul {
@@ -112,7 +127,7 @@ footer nav ul li {
 
 footer nav ul li a {
     text-decoration: none;
-    color: white; /* Изменить цвет текста на белый */
+    color: #84b3f1; /* Изменить цвет текста на #84b3f1 */
     font-weight: bold;
 }
 
@@ -124,20 +139,18 @@ footer nav ul li a:hover {
     background-color: rgba(128, 128, 128, 0.5); /* Полупрозрачный серый фон */
     border-radius: 10px; /* Скругленные углы */
     padding: 20px;
-    margin: 40px auto; /* Увеличить отступ между плитками */
+    margin: 20px auto; /* Добавить отступ, чтобы создать пространство между плитками */
     max-width: 600px; /* Сделать плитку уже */
     color: white; /* Изменить цвет текста на белый */
     text-align: center; /* Выровнять текст по центру */
     position: relative;
-    top: -160px; /* Настроить позицию, чтобы немного опустить */
     font-size: 16px; /* Немного уменьшить размер текста */
 }
 
 .collapsible-header {
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,16 +235,31 @@ footer nav ul li a:hover {
 
 /* Общие классы для плиток */
 .tile-header {
-    font-size: 22px; /* Размер шрифта для заголовков плиток */
-    font-weight: bold; /* Сделать заголовки плиток жирными */
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .tile-inner-header {
-    font-size: 18px; /* Размер шрифта для внутренних заголовков */
-    font-weight: bold; /* Сделать внутренние заголовки жирными */
+    font-size: 1.125rem;
+    font-weight: bold;
 }
 
 .tile-content {
-    font-size: 17px; /* Размер шрифта для содержимого плиток */
-    font-weight: bold; /* Сделать содержимое плиток жирным */
+    font-size: 1.0625rem;
+}
+
+.tile-content-bold {
+    font-size: 1.0625rem;
+    font-weight: bold;
+}
+
+.tile-content-italic {
+    font-size: 1.0625rem;
+    font-style: italic;
+}
+
+.tile-content-bold-italic {
+    font-size: 1.0625rem;
+    font-weight: bold;
+    font-style: italic;
 }
