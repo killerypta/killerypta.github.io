@@ -1,265 +1,96 @@
 body {
     margin: 0;
-    font-family: "EB Garamond", serif;
+    padding: 0;
+    font-family: 'Montserrat', serif;
     font-size: 15px;
-    color: #000;
     line-height: 1.5;
-    background: #000; /* Установить цвет фона черным */
+    color: white;
+    background-color: #1a1a1a;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-.header-container {
-    background-image: url('../images/head-background.png'); /* Добавить фоновое изображение для шапки и контейнера */
-    background-size: cover;
-    background-position: center top; /* Убедиться, что фоновое изображение покрывает контейнер и шапку */
-    background-repeat: no-repeat; /* Предотвратить повторение фонового изображения */
-    height: 100vh; /* Убедиться, что фоновое изображение покрывает всю высоту окна */
-    position: relative;
-}
-
-.header-container::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Расширить градиент, чтобы покрыть остальную часть окна */
-    background: linear-gradient(to bottom, #050417, #000); /* Плавный переход от #050417 к черному */
-    z-index: -1; /* Разместить градиент за содержимым */
-}
-
-header {
-    background-color: rgba(128, 128, 128, 0.2); /* Изменить цвет фона шапки на серый с 20% прозрачностью */
-    padding: 10px 0;
-    color: white; /* Изменить цвет текста на белый */
-    /* Удалить нижнюю границу, чтобы скрыть белую линию */
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    color: white; /* Изменить цвет текста, если необходимо */
-    text-align: center; /* Выровнять текст по центру */
-}
-
-.container h1 {
-    font-size: 2.5rem; /* Увеличить размер шрифта */
-    margin: 0; /* Убрать отступы */
-    padding: 20px 0; /* Добавить отступы сверху и снизу */
-    display: inline-block; /* Сделать элемент блочным */
-    text-align: center; /* Выровнять текст по центру */
-    line-height: 1.2; /* Настроить высоту строки для лучшего интервала */
-}
-
-.group-name {
-    display: block; /* Сделать название группы блочным элементом, чтобы переместить его на новую строку */
-    margin-top: 10px; /* Добавить немного пространства над названием группы */
-    font-size: 1.2em; /* Уменьшить размер шрифта названия группы */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Выровнять по вертикали */
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white; /* Изменить цвет текста на белый */
-    font-weight: bold;
-    font-size: 18px; /* Увеличить размер вкладок до 18px */
-    opacity: 1; /* Сделать вкладки прозрачными на 90% */
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: rgba(51, 51, 51, 0.2); /* Изменить цвет фона подвала на #333 с 20% прозрачностью */
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-    width: 100%;
-    color: white; /* Изменить цвет текста на белый */
-    position: relative;
-    bottom: 0;
-}
-
-footer .contact-info {
+/* Good color #101010 / #1a1a1a */
+.welcome {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
     text-align: center;
-    font-size: 18px; /* Увеличить размер шрифта */
+    color: white;
 }
 
-footer .contact-info a {
-    color: #84b3f1; /* Изменить цвет гиперссылок, чтобы соответствовать никнеймам */
-    text-decoration: none; /* Убрать подчеркивание */
+.welcome h1 {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 2.5rem;
 }
 
-footer .contact-info a:hover {
-    text-decoration: underline; /* Добавить подчеркивание при наведении */
+.welcome-message {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 2.8rem;
 }
 
-footer nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-footer nav ul li {
-    margin: 0 15px;
-}
-
-footer nav ul li a {
-    text-decoration: none;
-    color: #84b3f1; /* Изменить цвет текста на #84b3f1 */
-    font-weight: bold;
-}
-
-footer nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.collapsible-container {
-    background-color: rgba(128, 128, 128, 0.5); /* Полупрозрачный серый фон */
-    border-radius: 10px; /* Скругленные углы */
-    padding: 20px;
-    margin: 20px auto; /* Добавить отступ, чтобы создать пространство между плитками */
-    max-width: 600px; /* Сделать плитку уже */
-    color: white; /* Изменить цвет текста на белый */
-    text-align: center; /* Выровнять текст по центру */
-    position: relative;
-    font-size: 16px; /* Немного уменьшить размер текста */
-}
-
-.collapsible-header {
-    cursor: pointer;
+/* Collapsible tile [AI] */
+.collapsible {
+    width: 100%;
+    max-width: 65%;
+    margin: 1rem auto;
     font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.collapsible-header::after {
-    content: '▼'; /* Добавить стрелку */
-    margin-left: 10px;
-    transition: transform 0.3s ease; /* Добавить переход для вращения */
-}
-
-.collapsible-header.active::after {
-    transform: rotate(180deg); /* Повернуть стрелку при активном состоянии */
-}
-
-.collapsible-content {
+.collapsible input[type="checkbox"] {
     display: none;
-    padding-top: 10px;
-    text-align: left; /* Выровнять текст по левому краю */
 }
-
-.collapsible-content ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.collapsible-content li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px; /* Добавить немного пространства между элементами списка */
-}
-
-.collapsible-content li:first-child {
-    font-size: 18px; /* Увеличить размер шрифта для заголовков рангов */
-    font-weight: bold; /* Сделать заголовки рангов жирными */
-    margin-top: 20px; /* Добавить пространство над заголовками рангов */
-}
-
-.rank-header {
-    font-size: 18px; /* Размер шрифта для заголовков рангов */
-    font-weight: bold; /* Сделать заголовки рангов жирными */
-    margin-top: 20px; /* Добавить пространство над заголовками рангов */
-}
-
-.collapsible-content .rank {
-    font-size: 18px; /* Размер шрифта для рангов */
-    text-align: left; /* Выровнять ранги по левому краю */
-    flex: 1; /* Сделать ранги отдельной колонкой */
-    margin-left: 10px; /* Сдвинуть ранги немного вправо */
-}
-
-.collapsible-content .nickname {
-    font-size: 18px; /* Размер шрифта для никнеймов */
-    text-align: left; /* Выровнять никнеймы по левому краю */
-    flex: 2; /* Сделать никнеймы отдельной колонкой */
-    font-weight: bold; /* Сделать никнеймы жирными */
-}
-
-.collapsible-content a {
-    color: #84b3f1; /* Изменить цвет гиперссылок на #84b3f1 */
-    text-decoration: none; /* Убрать подчеркивание */
-    font-size: 18px; /* Размер шрифта для никнеймов */
-    font-weight: bold; /* Сделать никнеймы жирными */
-    position: relative;
-}
-
-.collapsible-content a:hover::after {
-    content: attr(data-tooltip); /* Использовать атрибут data-tooltip для содержимого всплывающей подсказки */
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 5px;
+.collapsible label {
+    display: block;
+    background: #1e44eb;
+    color: white;
+    padding: 0.333rem;
+    cursor: pointer;
     border-radius: 5px;
-    white-space: nowrap;
-    z-index: 10;
-    font-size: 12px;
-    margin-bottom: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    opacity: 0;
+    background: #f1f1f1;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 1rem;
+}
+.collapsible input[type="checkbox"]:checked ~ .collapsible-content {
+    max-height: 50rem;
+    opacity: 1;
+    padding: 10px;
+}
+.collapsible-text {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+}
+.collapsible-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+.collapsible-header2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
 }
 
-/* Общие классы для плиток */
-.tile-header {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
+/* Rank formatting */
 
-.tile-inner-header {
-    font-size: 1.125rem;
-    font-weight: bold;
-}
-
-.tile-content {
-    font-size: 1.0625rem;
-}
-
-.tile-content-bold {
-    font-size: 1.0625rem;
-    font-weight: bold;
-}
-
-.tile-content-italic {
-    font-size: 1.0625rem;
-    font-style: italic;
-}
-
-.tile-content-bold-italic {
-    font-size: 1.0625rem;
-    font-weight: bold;
-    font-style: italic;
+.admin {
+    display: block;
+    line-height: 2;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #79abf1;
 }

@@ -2,92 +2,79 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800&display=swap" rel="stylesheet">
-    <title>Sapphire Palace website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="assets/header-footer/load.js" defer></script>
+    <title>SP website</title>
 </head>
 <body>
-    <div class="header-container">
-        <!-- Шапка сайта -->
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="pages/users.html">Пользователям (разработка)</a></li>
-                    <li><a href="#">Администрации (разработка)</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- Основной контейнер с приветствием -->
-        <div class="container">
-            <h1>Приветствуем вас на сайте группы <span class="group-name">💎Sapphire Palace💎</span></h1>
+    <!-- Header -->
+    <header></header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Welcome message -->
+        <section class="welcome">
+            <h1>Приветствуем Вас на сайте группы <span class="welcome-message">💎Sapphire Palace💎</span></h1>
+        </section>
+
+        <!-- Administration list -->
+        <div class="collapsible">
+            <input type="checkbox" id="toggle">
+            <label for="toggle">👤 Администрация</label>
+            <div class="collapsible-content">
+                <p class="collapsible-header">⭐️⭐️⭐️⭐️⭐️ Владельцы</p>
+                <a class="admin" href="https://t.me/pehenyshkacookie" title="Александр">@pehenyshkacookie</a>
+                <a class="admin" href="https://t.me/Leraevol" title="Валерия">@Leraevol</a>
+                <p class="collapsible-header">⭐️⭐️⭐️⭐️ Старшие администраторы</p>
+                <a class="admin" href="https://t.me/killerypta" title="Юрий">@killerypta</a>
+                <a class="admin" href="https://t.me/Bestia_besti" title="Виолетта">@Bestia_besti</a>
+                <p class="collapsible-header">⭐️⭐️⭐️ Младшие администраторы</p>
+                <a class="admin" href="https://t.me/ubitatoboj" title="Арина">@ubitatoboj</a>
+                <p class="collapsible-header">⭐️⭐️ Старшие модераторы</p>
+                <a class="admin" href="https://t.me/Nnnnn8240" title="Наталья">@Nnnnn8240</a>
+                <p class="collapsible-header">⭐️ Младшие модераторы</p>
+                <a class="admin" href="https://t.me/Polina_Sirken" title="Полина">@Polina_Sirken</a>
+                <a class="admin" href="https://t.me/kory_achiy" title="Вячеслав">@kory_achiy</a>
+                <a class="admin" href="https://t.me/NHeNick" title="Николай">@NHeNick</a>
+                <a class="admin" href="https://t.me/kotqphj" title="?">@kotqphj</a>
+            </div>
         </div>
-    </div>
-    <!-- Плитка с информацией об администрации чата -->
-    <div class="collapsible-container">
-        <div class="collapsible-header tile-header">👤 Администрация чата</div>
-        <div class="collapsible-content">
-            <ul style="list-style-type: none; padding: 0;">
-                <li class="tile-inner-header">⭐️⭐️⭐️⭐️⭐️ Владельцы</li>
-                <li><a href="https://t.me/Leraevol" target="_blank" data-tooltip="Валерия">@Leraevol</a></li>
-                <li><a href="https://t.me/pehenyshkacookie" target="_blank" data-tooltip="Александр">@pehenyshkacookie</a></li>
-                <li class="tile-inner-header">⭐️⭐️⭐️⭐️ Старшие администраторы</li>
-                <li><a href="https://t.me/killerypta" target="_blank" data-tooltip="Юрий">@killerypta</a></li>
-                <li><a href="https://t.me/Bestia_besti" target="_blank" data-tooltip="Виолетта">@Bestia_besti</a></li>
-                <li class="tile-inner-header">⭐️⭐️⭐️ Младшие администраторы</li>
-                <li><a href="https://t.me/Aliavl_01" target="_blank" data-tooltip="Аля">@Aliavl_01</a></li>
-                <li class="tile-inner-header">⭐️⭐️ Старшие модераторы</li>
-                <li><a href="https://t.me/Nnnnn8240" target="_blank" data-tooltip="Наталья">@Nnnnn8240</a></li>
-                <li class="tile-inner-header">⭐️ Младшие администраторы</li>
-                <li><a href="https://t.me/TBOI_MOMI" target="_blank" data-tooltip="Арина">@TBOI_MOMI</a></li>
-            </ul>
+
+        <!-- Helpful info -->
+        <div class="collapsible">
+            <input type="checkbox" id="toggle-info">
+            <label for="toggle-info">✔️ Полезная информация</label>
+            <div class="collapsible-content">
+                <p class="collapsible-header">Чистка (ежемесячно)</p>
+                <p class="collapsible-text">Пользователи которые неактивны более 4 дней или имеющее менее 800 сообщений в месяц, будут исключены за неактивность. Если есть причина для временного отсутствия, пожалуйста сообщите об этом владельцам чата.</p>
+                <p class="collapsible-header">Как стать администратором?</p>
+                <p class="collapsible-header2">Требования:</p>
+                <p class="collapsible-text">1. Активность в группе.</p>
+                <p class="collapsible-text">2. Знание правил.</p>
+                <p class="collapsible-text">3. Отсутствие активных наказаний.</p>
+                <p class="collapsible-text">4. Нахождение в группе не менее 2 недель.</p>
+            </div>
         </div>
-    </div>
-    <!-- Плитка с полезной информацией -->
-    <div class="collapsible-container">
-        <div class="collapsible-header tile-header">✔️ Полезная информация</div>
-        <div class="collapsible-content">
-            <p class="tile-inner-header">Чистка (ежемесячно)</p>
-            <p class="tile-content">Пользователи которые неактивны более 4 дней или имеющее менее 800 сообщений в месяц, будут исключены за неактивность. Если есть причина для временного отсутствия, пожалуйста сообщите об этом владельцам чата.</p>
-            <p class="tile-inner-header">Как стать администратором?</p>
-            <p class="tile-content-bold">Требования:</p>
-            <p class="tile-content">• Активность в группе</p>
-            <p class="tile-content">• Знание правил</p>
-            <p class="tile-content">• Хорошее поведение (отсутствие нарушений)</p>
-            <p class="tile-content">• Нахождение в группе не менее 2 недель</p>
-            <p class="tile-content-italic">Чтобы стать администратором, следите за новыми объявлениями о наборе на должность.</p>
+
+        <!-- News! -->
+        <div class="collapsible">
+            <input type="checkbox" id="toggle-news">
+            <label for="toggle-news">📰 Новости!</label>
+            <div class="collapsible-content">
+                <p class="collapsible-header">На данный момент нет актуальных новостей!</p>
+                <p class="collapsible-text">Архив новостей 🗄️ (разработка)</p>
+            </div>
         </div>
-    </div>
-    <!-- Плитка с новостями -->
-    <div class="collapsible-container">
-        <div class="collapsible-header tile-header">📰 Новости!</div>
-        <div class="collapsible-content">
-            <p class="tile-content">На данный момент нет актуальных новостей!</p>
-            <p class="tile-content">Архив новостей🗄️ (разработка)</p>
-        </div>
-    </div>
-    <!-- Контактная информация -->
-    <footer>
-        <div class="contact-info" style="text-align: center; font-size: 1.2em;">
-            <p>Email: <a href="mailto:intellectual.canidae.nxwz+s.p.web@mask.me?subject=s.p. website support" style="text-decoration: none; color: #84b3f1;">contact-mail</a> | Telegram: <a href="https://t.me/killerypta" target="_blank" style="text-decoration: none; color: #84b3f1;">@killerypta</a></p>
-        </div>
-    </footer>
-    <script>
-        // Добавление функционала для сворачивания и разворачивания плиток
-        document.querySelectorAll('.collapsible-header').forEach(header => {
-            header.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                    this.classList.remove('active');
-                } else {
-                    content.style.display = 'block';
-                    this.classList.add('active');
-                }
-            });
-        });
-    </script>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
 </body>
 </html>
