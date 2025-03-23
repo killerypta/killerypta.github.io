@@ -1,0 +1,194 @@
+/* Основные стили для body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', serif;
+    font-size: var(--font-size-base); /* Базовый размер шрифта */
+    line-height: 1.5;
+    color: white;
+    background-color: var(--primary-bg-color);
+}
+
+/* Переменные CSS для улучшенной повторяемости */
+:root {
+    --primary-bg-color: #1a1a1a;
+    --secondary-bg-color: #2a2a2a;
+    --highlight-color: #f0a500;
+    --border-color: #444;
+    --accent-color: #f0a500;
+    --font-size-base: 15px; /* Базовый размер шрифта */
+    --font-size-md: 16px; /* Для планшетов и ноутбуков */
+    --font-size-lg: 18px; /* Для ноутбуков */
+    --font-size-xl: 5rem; /* Для больших экранов */
+    --padding-base: 1rem;
+    --padding-lg: 1.5rem;
+    --max-width: 800px; /* Для контейнеров */
+    --tile-max-width: 900px;
+    --collapsible-width: 65%;
+}
+
+/* Welcome message */
+.welcome {
+    display: block;
+    margin: var(--padding-base) auto;
+    padding: var(--padding-base);
+    text-align: center;
+    color: white;
+}
+
+.welcome h1 {
+    display: block;
+    margin: var(--padding-base) auto;
+    padding: var(--padding-base);
+    font-size: 2rem;
+}
+
+.welcome-message {
+    display: block;
+    margin: 0 auto;
+    padding: var(--padding-base);
+    font-size: 2.2rem;
+}
+
+/* Rules Section */
+.rules {
+    display: block;
+    margin: var(--padding-base) auto;
+    padding: var(--padding-base);
+    max-width: var(--max-width);
+    background-color: var(--secondary-bg-color);
+    border-radius: 5px;
+    color: white;
+}
+
+.rules h2, .rules h3 {
+    text-align: center;
+    color: var(--highlight-color);
+}
+
+.rules ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rules ul li {
+    margin: 0.5rem 0;
+}
+
+.rules hr {
+    border: 1px solid var(--border-color);
+    margin: 1rem 0;
+}
+
+/* Tile Box */
+.tile {
+    padding: var(--padding-base);
+    margin: var(--padding-base) auto;
+    max-width: var(--max-width);
+    background-color: var(--secondary-bg-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+/* Адаптивность */
+
+/* Мобильный-first подход: стили по умолчанию для мобильных */
+@media (min-width: 768px) {
+    body {
+        font-size: var(--font-size-md);
+    }
+
+    .welcome h1 {
+        font-size: 3rem;
+    }
+
+    .welcome-message {
+        font-size: 3.5rem;
+    }
+
+    .tile {
+        max-width: var(--tile-max-width);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: var(--font-size-lg);
+    }
+
+    .welcome h1 {
+        font-size: 4rem;
+    }
+
+    .welcome-message {
+        font-size: 4.2rem;
+    }
+
+    .tile {
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .welcome h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .welcome-message {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Collapsible tile [AI] */
+.collapsible {
+    width: 100%;
+    max-width: var(--collapsible-width);
+    margin: var(--padding-base) auto;
+    font-size: 1.5rem;
+}
+
+.collapsible input[type="checkbox"] {
+    display: none;
+}
+.collapsible label {
+    display: block;
+    background: #1e44eb;
+    color: white;
+    padding: 0.333rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: var(--padding-base);
+}
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    opacity: 0;
+    background: #f1f1f1;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: var(--padding-base);
+}
+.collapsible input[type="checkbox"]:checked ~ .collapsible-content {
+    max-height: 50rem;
+    opacity: 1;
+    padding: 10px;
+}
+.collapsible-text {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+}
+.collapsible-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+.collapsible-header2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+}
